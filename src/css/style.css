@@ -9,7 +9,7 @@
 .slider-wrap {
   width: 1000px;
   height: 400px;
-  margin: 50px auto;
+  margin: 50px auto;  /* auto를 사용해서 상하좌우 50px씩, 즉 가운데 정렬 */
   position: relative;
   overflow: hidden;
 }
@@ -17,11 +17,11 @@
 .slider-wrap ul.slider {
   width: 8000px;
   height: 100%;
-  position: absolute;
+  position: absolute; /* 부모 안에서 position을 움직인다. */
 }
 /* ! */
 .slider-wrap ul.slider li {
-  float: left;
+  float: left;  /* float: left 사용함으로써 list들이 아래로 나열되는것을 막음 */
   width: 1000px;
   height: 400px;
 }
@@ -30,15 +30,15 @@
   position: absolute;
   width: 50px;
   height: 60px;
-  top: 50%;
-  margin-top: -25px;
+  top: 50%; /* 부모 height의 50% 만큼 위치하고 */
+  margin-top: -25px; /* 세밀하게 위로 조금 올렸고 */
   line-height: 57px;
   text-align: center;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.1);
-  z-index: 100;
+  z-index: 100; /* 다른 element보다 위에 있는 효과 */
   user-select: none;
-  transition: 0.1s;
+  transition: 0.1s; /* 변경사항이 있으면 0.1초간 바뀐다 */
 }
 
 .btn:hover {
@@ -46,19 +46,19 @@
 }
 /* ! */
 .next {
-  right: -50px;
+  right: -50px; /* 오른쪽으로 50px 벗어나고 */
   border-radius: 7px 0px 0px 7px;
   color: white;
 }
 /* ! */
 .previous {
-  left: -50px;
+  left: -50px; /* 왼쪽으로 50px 벗어나고 */
   border-radius: 0px 7px 7px 7px;
   color: white;
 }
 /* ! */
 .slider-wrap:hover .next {
-  right: 0px;
+  right: 0px; /* 이미지에 hover를 하면 마치 버튼이 바깥에서 안으로 들어오는 효과 */
 }
 /* ! */
 .slider-wrap:hover .previous {
